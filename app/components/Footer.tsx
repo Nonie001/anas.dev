@@ -4,15 +4,15 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#1a1a1a] px-4 py-8 sm:px-6 sm:py-12">
+    <footer className="border-t border-[var(--border)] px-4 py-8 sm:px-6 sm:py-12">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 sm:gap-8 sm:flex-row sm:items-center sm:justify-between">
         {/* Left */}
         <div>
-          <p className="mb-1 text-sm font-bold tracking-wider text-white">
+          <p className="mb-1 text-sm font-bold tracking-wider text-[var(--text)]">
             {PERSONAL.name.split(" ")[0]}
-            <span className="text-[#333]"> .</span>
+            <span className="text-[var(--text-dim)]"> .</span>
           </p>
-          <p className="text-[0.7rem] text-[#333]">
+          <p className="text-[0.7rem] text-[var(--text-dim)]">
             © {new Date().getFullYear()} {PERSONAL.nameTh}. All rights reserved.
           </p>
         </div>
@@ -22,7 +22,7 @@ export function Footer() {
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="text-[0.65rem] font-semibold uppercase tracking-wider text-[#333] transition-colors hover:text-white"
+              className="text-[0.65rem] font-semibold uppercase tracking-wider text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
             >
               {s.label}
             </a>
@@ -35,7 +35,7 @@ export function Footer() {
             href={PERSONAL.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#333] transition-colors hover:text-white"
+            className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
           >
             <SiGithub size={16} />
           </a>
@@ -43,7 +43,7 @@ export function Footer() {
             href={PERSONAL.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#333] transition-colors hover:text-white"
+            className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
           >
             <FaLinkedinIn size={16} />
           </a>

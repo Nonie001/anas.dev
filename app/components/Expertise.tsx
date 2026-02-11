@@ -24,20 +24,20 @@ function SkillGroup({
       className="card p-4 sm:p-6"
     >
       <div className="mb-3 flex items-center gap-3 sm:mb-5">
-        <span className="text-[#555]">{icon}</span>
+        <span className="text-[var(--text-dim)]">{icon}</span>
         <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
       </div>
       <div className="flex flex-wrap gap-2">
         {skills.map((s) => (
           <div
             key={s.name}
-            className="group flex items-center gap-2 rounded-full border border-[#1f1f1f] bg-[#0c0c0c] px-3.5 py-2 transition-all hover:border-[#333] hover:bg-[#1a1a1a]"
+            className="group flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg)] px-3.5 py-2 transition-all hover:border-[var(--border-hover)] hover:bg-[var(--bg-hover)]"
           >
             <s.icon
               className="text-sm transition-all group-hover:scale-110"
               style={{ color: s.color }}
             />
-            <span className="text-xs font-medium text-[#888] transition-colors group-hover:text-white">
+            <span className="text-xs font-medium text-[var(--text-muted)] transition-colors group-hover:text-[var(--text)]">
               {s.name}
             </span>
           </div>
@@ -59,7 +59,7 @@ export function Expertise() {
           <h2 className="mb-2 text-2xl font-black tracking-tight sm:mb-3 sm:text-4xl md:text-5xl">
             เทคโนโลยีที่ถนัด
           </h2>
-          <p className="max-w-md text-sm text-[#555]">
+          <p className="max-w-md text-sm text-[var(--text-dim)]">
             เครื่องมือและเทคโนโลยีที่ใช้ในการสร้างสรรค์ผลงานทั้งเว็บและมือถือ
           </p>
         </div>
@@ -95,7 +95,7 @@ export function Expertise() {
                   (s, i) => (
                     <div
                       key={`${setIdx}-${i}`}
-                      className="flex shrink-0 items-center gap-2 text-[#333]"
+                      className="flex shrink-0 items-center gap-2 text-[var(--text-dim)]"
                     >
                       <s.icon size={14} />
                       <span className="text-xs font-medium">{s.name}</span>

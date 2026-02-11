@@ -1,5 +1,6 @@
 import { PROJECTS } from "@/app/data/resume-data";
-import { HiOutlineArrowRight } from "react-icons/hi";
+import { HiOutlineArrowRight, HiOutlineExternalLink } from "react-icons/hi";
+import Link from "next/link";
 
 export function Work() {
   return (
@@ -13,21 +14,21 @@ export function Work() {
           <h2 className="mb-2 text-2xl font-black tracking-tight sm:mb-3 sm:text-4xl md:text-5xl">
             ผลงานที่ผ่านมา
           </h2>
-          <p className="max-w-md text-sm text-[#555]">
+          <p className="max-w-md text-sm text-[var(--text-dim)]">
             โปรเจคที่ได้ออกแบบและพัฒนาด้วยตนเอง
           </p>
         </div>
 
         {/* Featured project */}
         <div data-reveal className="mb-8">
-          <span className="mb-3 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#444]">
+          <span className="mb-3 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Featured Project
           </span>
         </div>
 
         {/* Project cards */}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {PROJECTS.map((p, i) => (
+          {PROJECTS.slice(0, 3).map((p, i) => (
             <div
               key={i}
               data-reveal
@@ -36,21 +37,31 @@ export function Work() {
             >
               {/* Top accent */}
               <div
-                className="h-[2px] w-full"
+                className="h-0.5 w-full"
                 style={{
                   background: `linear-gradient(90deg, ${p.color}, transparent)`,
                 }}
               />
 
+              {/* Project Image */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[var(--bg-card)]/80 via-transparent to-transparent" />
+              </div>
+
               <div className="p-4 sm:p-6">
                 {/* Subtitle */}
-                <span className="mb-1 block text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[#444]">
+                <span className="mb-1 block text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)]">
                   {p.subtitle}
                 </span>
 
                 {/* Title row */}
                 <div className="mb-4 flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-bold transition-colors group-hover:text-white">
+                  <h3 className="text-lg font-bold transition-colors group-hover:text-[var(--text)]">
                     {p.title}
                   </h3>
                   <div
@@ -62,27 +73,58 @@ export function Work() {
                 </div>
 
                 {/* Description */}
-                <p className="mb-5 text-[0.8rem] leading-relaxed text-[#555]">
+                <p className="mb-5 line-clamp-2 text-[0.8rem] leading-relaxed text-[var(--text-dim)]">
                   {p.desc}
                 </p>
 
                 {/* Tags */}
                 <div className="mb-4 flex flex-wrap gap-1.5">
-                  {p.tech.map((t) => (
+                  {p.tech.slice(0, 3).map((t) => (
                     <span key={t} className="tag text-[0.6rem]">
                       {t}
                     </span>
                   ))}
+                  {p.tech.length > 3 && (
+                    <span className="tag text-[0.6rem]">+{p.tech.length - 3}</span>
+                  )}
                 </div>
 
-                {/* View link */}
-                <div className="flex items-center gap-1.5 text-xs font-semibold text-[#444] transition-colors group-hover:text-white">
-                  View Project
-                  <HiOutlineArrowRight className="transition-transform group-hover:translate-x-1" />
+                {/* Actions */}
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    className="flex items-center gap-1.5 text-xs font-semibold text-[var(--text-dim)] transition-colors group-hover:text-[var(--text)]"
+                  >
+                    ดูรายละเอียด
+                    <HiOutlineArrowRight className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+
+                  {p.url && (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-dim)] transition-all hover:bg-[var(--bg-hover)] hover:text-[var(--text)]"
+                    >
+                      <HiOutlineExternalLink size={14} />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Projects Button */}
+        <div data-reveal className="mt-12 text-center">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--bg-card)] px-6 py-3 font-semibold text-[var(--text)] transition-all hover:bg-[var(--bg-hover)] hover:scale-105"
+          >
+            ดูโปรเจคทั้งหมด ({PROJECTS.length})
+            <HiOutlineArrowRight />
+          </Link>
         </div>
       </div>
     </section>

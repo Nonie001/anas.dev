@@ -4,6 +4,7 @@ import {
   HiOutlineDeviceMobile,
   HiOutlineSparkles,
   HiOutlineGlobe,
+  HiOutlineCalculator,
 } from "react-icons/hi";
 import {
   SiReact,
@@ -54,6 +55,9 @@ export interface Project {
   Icon: IconType;
   color: string;
   url?: string;
+  image: string;
+  slug: string;
+  features: string[];
 }
 
 export interface Education {
@@ -86,10 +90,11 @@ export const PERSONAL = {
   nameTh: "อานัส เอามิง",
   title: "SOFTWARE ENGINEER, WEB & MOBILE DEVELOPER.",
   bio: "สร้างเว็บไซต์และแอปมือถือด้วย React, Next.js และ Flutter ออกแบบ UI/UX ที่ทันสมัย ใช้งานง่าย และมีประสิทธิภาพสูง",
-  email: "anas@example.com",
-  phone: "+66 xx-xxx-xxxx",
-  location: "Thailand",
-  github: "https://github.com/anas",
+  email: "anas.aouming@gmail.com",
+  phone: "098-113-5654",
+  location: "Ramkhamhaeng, Bangkapi, Bangkok, Thailand",
+  github: "https://github.com/Nonie001",
+  github2: "https://github.com/SP-Nut",
   linkedin: "https://linkedin.com/in/anas",
 };
 
@@ -123,48 +128,121 @@ export const SKILLS_TOOLS: Skill[] = [
 /* ─── Experience ─── */
 export const EXPERIENCES: Experience[] = [
   {
-    role: "Web Developer",
-    company: "Freelance / Projects",
-    location: "Thailand",
+    role: "Web Master",
+    company: "SP Group (เอสพี กรุ๊ป)",
+    location: "Bangkok, Thailand",
     period: "2024 – ปัจจุบัน",
-    desc: "ออกแบบและพัฒนาเว็บไซต์ด้วย React, Next.js และ Tailwind CSS รองรับ responsive design, SEO optimization และ performance tuning ให้กับลูกค้าหลายราย",
-    tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  {
-    role: "Mobile App Developer",
-    company: "Freelance / Projects",
-    location: "Thailand",
-    period: "2023 – ปัจจุบัน",
-    desc: "พัฒนา Mobile Application ด้วย Flutter สำหรับ iOS และ Android รองรับ cross-platform พร้อม native-like performance และ UX ที่ลื่นไหล",
-    tags: ["Flutter", "Dart", "Firebase", "REST API"],
+    desc: "ดูแลและพัฒนาเว็บไซต์ของบริษัทในเครือ SP Group ได้แก่ SP Kansard, SP Warehouse และ SP Hardwares รับผิดชอบงานด้าน Digital Marketing การยิงโฆษณา (Ads), การทำ SEO และพัฒนาเว็บไซต์ใหม่",
+    tags: ["Web Development", "SEO", "Digital Marketing", "Google Ads"],
+    url: "https://spkansard.com/",
   },
 ];
 
 /* ─── Projects ─── */
 export const PROJECTS: Project[] = [
   {
-    title: "E-Commerce Platform",
-    subtitle: "Web Application",
-    desc: "ระบบ e-commerce ครบวงจร มีระบบตะกร้า, ชำระเงินออนไลน์, จัดการสินค้า และ dashboard สำหรับ admin",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    title: "SP Kansard Company Website",
+    subtitle: "Corporate Website",
+    desc: "พัฒนาเว็บไซต์บริษัทเพื่อแสดงข้อมูลสินค้าและบริการ ออกแบบโครงสร้างเว็บไซต์ให้รองรับ SEO เน้น UX/UI เพื่อให้ลูกค้าเข้าถึงข้อมูลได้ง่าย",
+    tech: ["React", "Next.js", "SEO", "Responsive Design"],
     Icon: HiOutlineGlobe,
     color: "#818cf8",
+    url: "https://spkansard.com/",
+    image: "/images/projects/sp-kansard.svg",
+    slug: "sp-kansard-company-website",
+    features: [
+      "ออกแบบโครงสร้างเว็บไซต์ให้รองรับ SEO",
+      "เน้น UX/UI เพื่อให้ลูกค้าเข้าถึงข้อมูลได้ง่าย",
+      "ดูแลการ deploy และจัดการระบบเว็บไซต์",
+      "Responsive Design รองรับทุกอุปกรณ์"
+    ]
   },
   {
-    title: "Delivery App",
-    subtitle: "Cross-Platform Mobile App",
-    desc: "แอปจัดส่งอาหาร real-time tracking, push notification, ระบบจ่ายเงินออนไลน์ และ in-app chat",
-    tech: ["Flutter", "Dart", "Firebase", "Google Maps"],
-    Icon: HiOutlineDeviceMobile,
+    title: "SP Warehouse",
+    subtitle: "E-commerce Website",
+    desc: "พัฒนาเว็บไซต์ขายวัสดุและสินค้าออนไลน์ ระบบเลือกซื้อสินค้า (Online Shopping) ออกแบบระบบแสดงสินค้าและจัดการข้อมูล รองรับการขยายระบบในอนาคต",
+    tech: ["React", "Next.js", "E-commerce", "Database Design"],
+    Icon: HiOutlineGlobe,
     color: "#22d3ee",
+    url: "https://spwarehouse9.com/",
+    image: "/images/projects/sp-warehouse.svg",
+    slug: "sp-warehouse-ecommerce",
+    features: [
+      "ระบบเลือกซื้อสินค้า (Online Shopping)",
+      "ออกแบบระบบแสดงสินค้าและจัดการข้อมูล",
+      "รองรับการขยายระบบในอนาคต",
+      "ระบบจัดการสินค้าและคลังสินค้า"
+    ]
   },
   {
-    title: "Portfolio Website",
-    subtitle: "Web Application",
-    desc: "เว็บไซต์ portfolio แบบ minimal dark theme พร้อม scroll animation และ responsive design",
-    tech: ["Next.js", "React", "Tailwind CSS", "CSS Animations"],
-    Icon: HiOutlineSparkles,
+    title: "SP Hardwares Website",
+    subtitle: "Hardware E-commerce",
+    desc: "พัฒนาเว็บไซต์สินค้า Hardware และวัสดุ จัดโครงสร้างเว็บไซต์ให้ใช้งานง่าย ปรับ performance และ UX ให้เหมาะกับผู้ใช้งานจริง",
+    tech: ["React", "Next.js", "Performance Optimization", "UX Design"],
+    Icon: HiOutlineGlobe,
     color: "#f472b6",
+    url: "https://sphardwares.com/",
+    image: "/images/projects/sp-hardwares.svg",
+    slug: "sp-hardwares-website",
+    features: [
+      "จัดโครงสร้างเว็บไซต์ให้ใช้งานง่าย",
+      "ปรับ performance และ UX ให้เหมาะกับผู้ใช้งานจริง",
+      "แสดงสินค้า Hardware และวัสดุ",
+      "ระบบค้นหาและกรองสินค้าที่มีประสิทธิภาพ"
+    ]
+  },
+  {
+    title: "Weekend POS System",
+    subtitle: "Point of Sale Application",
+    desc: "พัฒนาระบบ POS สำหรับร้านกาแฟ ระบบขายหน้าร้าน ระบบสมาชิกและสะสมแต้ม สรุปยอดขายและรายงาน ออกใบเสร็จและพิมพ์บิล Dashboard สำหรับจัดการร้าน",
+    tech: ["React", "Next.js", "Dashboard", "POS System"],
+    Icon: HiOutlineSparkles,
+    color: "#10b981",
+    url: "https://weekend-pos.vercel.app/pos",
+    image: "/images/projects/weekend-pos.svg",
+    slug: "weekend-pos-system",
+    features: [
+      "ระบบขายหน้าร้าน (Point of Sale)",
+      "ระบบสมาชิกและสะสมแต้ม (Loyalty Program)",
+      "สรุปยอดขายและรายงานต่าง ๆ",
+      "ออกใบเสร็จและพิมพ์บิลได้",
+      "Dashboard สำหรับจัดการร้าน"
+    ]
+  },
+  {
+    title: "Muslim Plus",
+    subtitle: "Muslim Center Mobile App",
+    desc: "พัฒนาแอปมือถือสำหรับผู้ใช้งานชาวมุสลิม แสดงเวลาละหมาดในประเทศไทย รวมฟีเจอร์ด้านศาสนาในแอปเดียว ปรับปรุง UI/UX และระบบแจ้งเตือน",
+    tech: ["Flutter", "Dart", "Firebase", "Push Notifications"],
+    Icon: HiOutlineDeviceMobile,
+    color: "#8b5cf6",
+    url: "https://play.google.com/store/apps/details?id=com.anasauming.muslimplus",
+    image: "/images/projects/muslim-plus.svg",
+    slug: "muslim-plus-app",
+    features: [
+      "แสดงเวลาละหมาดในประเทศไทย",
+      "รวมฟีเจอร์ด้านศาสนาในแอปเดียว",
+      "ปรับปรุง UI/UX และระบบแจ้งเตือน",
+      "ดาวน์โหลดได้จาก Google Play Store"
+    ]
+  },
+  {
+    title: "ระบบคำนวณราคากันสาด",
+    subtitle: "Price Calculator Web App",
+    desc: "ระบบคำนวณราคากันสาดออนไลน์ ช่วยให้ลูกค้าสามารถคำนวณราคาได้ด้วยตนเอง เลือกขนาด วัสดุ และรูปแบบกันสาดที่ต้องการ พร้อมแสดงผลราคาทันที",
+    tech: ["React", "Next.js", "Calculator", "UX Design"],
+    Icon: HiOutlineCalculator,
+    color: "#f59e0b",
+    url: "https://cal-customer.vercel.app/",
+    image: "/images/projects/canopy-calculator.svg",
+    slug: "canopy-price-calculator",
+    features: [
+      "คำนวณราคากันสาดตามขนาดที่ต้องการ",
+      "เลือกวัสดุและรูปแบบกันสาดได้หลากหลาย",
+      "แสดงผลราคาแบบ Real-time",
+      "ใช้งานง่าย UI/UX ทันสมัย",
+      "รองรับการใช้งานบนมือถือ"
+    ]
   },
 ];
 
@@ -172,10 +250,10 @@ export const PROJECTS: Project[] = [
 export const EDUCATION: Education[] = [
   {
     degree: "ปริญญาตรี",
-    field: "Computer Science / IT",
-    school: "มหาวิทยาลัย",
-    period: "2021 – 2025",
-    detail: "ศึกษาด้าน Computer Science เน้น Web Development & Mobile Application Development",
+    field: "วิศวกรรมคอมพิวเตอร์ (Computer Engineering)",
+    school: "มหาวิทยาลัยเกษตรศาสตร์",
+    period: "2020 – 2024",
+    detail: "ศึกษาด้านวิศวกรรมคอมพิวเตอร์ เน้น Web Development & Mobile Application Development",
   },
 ];
 
@@ -184,25 +262,25 @@ export const CONTACTS: ContactLink[] = [
   {
     icon: <HiOutlineMail />,
     label: "Email",
-    value: "anas@example.com",
-    href: "mailto:anas@example.com",
+    value: "anas.aouming@gmail.com",
+    href: "mailto:anas.aouming@gmail.com",
   },
   {
     icon: <HiOutlinePhone />,
     label: "Phone",
-    value: "+66 xx-xxx-xxxx",
-    href: "tel:+66xxxxxxxx",
+    value: "098-113-5654",
+    href: "tel:+66981135654",
   },
   {
     icon: <SiGithub />,
-    label: "GitHub",
-    value: "github.com/anas",
-    href: "https://github.com/anas",
+    label: "GitHub (Personal)",
+    value: "github.com/Nonie001",
+    href: "https://github.com/Nonie001",
   },
   {
-    icon: <FaLinkedinIn />,
-    label: "LinkedIn",
-    value: "Anas Aoming",
-    href: "https://linkedin.com/in/anas",
+    icon: <SiGithub />,
+    label: "GitHub (Work)",
+    value: "github.com/SP-Nut",
+    href: "https://github.com/SP-Nut",
   },
 ];

@@ -1,0 +1,35 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" rx="8" fill="url(#gradient6)"/>
+  
+  <!-- Calculator Display -->
+  <rect x="100" y="30" width="200" height="50" rx="8" fill="rgba(245, 158, 11, 0.2)"/>
+  <rect x="115" y="45" width="170" height="20" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <text x="270" y="60" text-anchor="end" fill="#f59e0b" font-family="Arial" font-size="14" font-weight="bold">฿ 15,500</text>
+  
+  <!-- Calculator Body -->
+  <rect x="80" y="90" width="240" height="130" rx="12" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Size Input Row -->
+  <rect x="100" y="105" width="90" height="30" rx="6" fill="rgba(245, 158, 11, 0.3)"/>
+  <text x="145" y="125" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="10">กว้าง</text>
+  <rect x="210" y="105" width="90" height="30" rx="6" fill="rgba(245, 158, 11, 0.3)"/>
+  <text x="255" y="125" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="10">ยาว</text>
+  
+  <!-- Material Options -->
+  <rect x="100" y="145" width="200" height="25" rx="6" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="115" cy="157" r="6" fill="#f59e0b"/>
+  <rect x="130" y="152" width="60" height="10" rx="2" fill="rgba(255,255,255,0.4)"/>
+  
+  <!-- Calculate Button -->
+  <rect x="100" y="180" width="200" height="30" rx="8" fill="#f59e0b"/>
+  <text x="200" y="200" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">คำนวณราคา</text>
+  
+  <text x="200" y="238" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="11">ระบบคำนวณราคากันสาด</text>
+  
+  <defs>
+    <linearGradient id="gradient6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0c0c0c"/>
+    </linearGradient>
+  </defs>
+</svg>

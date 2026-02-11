@@ -14,7 +14,7 @@ export default function Home() {
   const revealRef = useReveal();
 
   return (
-    <div ref={revealRef} className="min-h-screen bg-[#0c0c0c] text-white">
+    <div ref={revealRef} className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <Sidebar />
       <TopNav />
       <Hero />
