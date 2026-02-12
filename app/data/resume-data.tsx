@@ -20,11 +20,9 @@ import {
   SiGithub,
   SiHtml5,
   SiCss3,
-  SiMongodb,
   SiPostgresql,
-  SiPython,
+  SiVercel,
 } from "react-icons/si";
-import { FaLinkedinIn } from "react-icons/fa";
 import type { IconType } from "react-icons";
 import type { ReactNode } from "react";
 
@@ -99,7 +97,6 @@ export const PERSONAL = {
   location: "Ramkhamhaeng, Bangkapi, Bangkok, Thailand",
   github: "https://github.com/Nonie001",
   github2: "https://github.com/SP-Nut",
-  linkedin: "https://linkedin.com/in/anas",
 };
 
 /* ─── Skills ─── */
@@ -120,11 +117,10 @@ export const SKILLS_MOBILE: Skill[] = [
 ];
 
 export const SKILLS_TOOLS: Skill[] = [
-  { name: "Python", icon: SiPython, color: "#3776AB" },
   { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "Vercel", icon: SiVercel, color: "#000000" },
 ];
 
 /* ─── Experience ─── */

@@ -1,6 +1,5 @@
 import { PERSONAL, SECTIONS } from "@/app/data/resume-data";
 import { SiGithub } from "react-icons/si";
-import { FaLinkedinIn } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -38,14 +37,6 @@ export function Footer() {
             className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
           >
             <SiGithub size={16} />
-          </a>
-          <a
-            href={PERSONAL.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
-          >
-            <FaLinkedinIn size={16} />
           </a>
         </div>
       </div>

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { SECTIONS, PERSONAL } from "@/app/data/resume-data";
 import { SiGithub } from "react-icons/si";
-import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiOutlineX, HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { useTheme } from "@/app/context/ThemeContext";
 
@@ -68,14 +67,6 @@ export function TopNav() {
           >
             <SiGithub size={16} />
           </a>
-          <a
-            href={PERSONAL.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
-          >
-            <FaLinkedinIn size={16} />
-          </a>
 
           {/* Hamburger button — mobile only */}
           <button
@@ -113,9 +104,6 @@ export function TopNav() {
         <div className="flex items-center justify-center gap-6 pb-12">
           <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer" className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
             <SiGithub size={20} />
-          </a>
-          <a href={PERSONAL.linkedin} target="_blank" rel="noopener noreferrer" className="text-[var(--text-dim)] transition-colors hover:text-[var(--text)]">
-            <FaLinkedinIn size={20} />
           </a>
         </div>
       </div>
