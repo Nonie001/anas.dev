@@ -21,7 +21,7 @@ export function Work() {
 
         {/* Featured project */}
         <div data-reveal className="mb-8">
-          <span className="mb-3 block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Featured Project
           </span>
         </div>
@@ -55,7 +55,7 @@ export function Work() {
 
               <div className="p-4 sm:p-6">
                 {/* Subtitle */}
-                <span className="mb-1 block text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)]">
+                <span className="mb-1 block text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)]">
                   {p.subtitle}
                 </span>
 
@@ -73,7 +73,7 @@ export function Work() {
                 </div>
 
                 {/* Description */}
-                <p className="mb-5 line-clamp-2 text-[0.8rem] leading-relaxed text-[var(--text-dim)]">
+                <p className="mb-5 line-clamp-2 text-sm leading-relaxed text-[var(--text-dim)]">
                   {p.desc}
                 </p>
 

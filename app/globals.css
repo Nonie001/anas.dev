@@ -5,8 +5,8 @@
   --bg-card: #141414;
   --bg-hover: #1a1a1a;
   --text: #e8e8e8;
-  --text-muted: #777;
-  --text-dim: #444;
+  --text-muted: #999;
+  --text-dim: #6b6b6b;
   --accent: #e8e8e8;
   --border: #1f1f1f;
   --border-hover: #333;
@@ -19,8 +19,8 @@
   --bg-card: #ffffff;
   --bg-hover: #f0f0f0;
   --text: #1a1a1a;
-  --text-muted: #666;
-  --text-dim: #999;
+  --text-muted: #555;
+  --text-dim: #777;
   --accent: #1a1a1a;
   --border: #e0e0e0;
   --border-hover: #ccc;

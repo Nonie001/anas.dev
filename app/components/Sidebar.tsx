@@ -39,7 +39,7 @@ export function Sidebar() {
             }`}
           />
           {/* Tooltip */}
-          <span className="pointer-events-none absolute left-10 whitespace-nowrap rounded bg-[var(--bg-hover)] px-3 py-1.5 text-[0.6rem] font-semibold tracking-wider text-[var(--text-muted)] opacity-0 transition-all group-hover:opacity-100">
+          <span className="pointer-events-none absolute left-10 whitespace-nowrap rounded bg-[var(--bg-hover)] px-3 py-1.5 text-[0.7rem] font-semibold tracking-wider text-[var(--text-muted)] opacity-0 transition-all group-hover:opacity-100">
             {s.num} {"//"} {s.label}
           </span>
         </a>

@@ -29,7 +29,7 @@ export function Hero() {
             <span className="absolute h-2.5 w-2.5 animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="relative h-2.5 w-2.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)] sm:text-xs sm:tracking-[0.25em]">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)] sm:text-sm sm:tracking-[0.25em]">
             Available for work
           </span>
         </div>
@@ -47,7 +47,7 @@ export function Hero() {
         </h2>
 
         {/* Bio */}
-        <p className="anim-up d3 mb-8 max-w-xs text-[0.82rem] leading-relaxed text-[var(--text-muted)] sm:mb-12 sm:max-w-lg sm:text-[0.9rem]">
+        <p className="anim-up d3 mb-8 max-w-xs text-sm leading-relaxed text-[var(--text-muted)] sm:mb-12 sm:max-w-lg sm:text-base">
           {PERSONAL.bio}
         </p>
 
@@ -75,7 +75,7 @@ export function Hero() {
       {/* Scroll indicator */}
       <div className="anim-in d10 absolute bottom-6 left-1/2 -translate-x-1/2 sm:bottom-8">
         <div className="flex flex-col items-center gap-3">
-          <span className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
+          <span className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
             Scroll
           </span>
           <div className="h-8 w-px bg-linear-to-b from-[var(--text-dim)] to-transparent sm:h-12" />

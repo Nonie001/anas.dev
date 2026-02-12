@@ -1,5 +1,5 @@
-import { EXPERIENCES, EDUCATION } from "@/app/data/resume-data";
-import { HiOutlineLocationMarker, HiOutlineAcademicCap } from "react-icons/hi";
+import { EXPERIENCES } from "@/app/data/resume-data";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export function Experience() {
   return (
@@ -49,26 +49,26 @@ export function Experience() {
                         {exp.company}
                       </p>
                     </div>
-                    <span className="shrink-0 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1 text-[0.65rem] font-semibold text-[var(--text-muted)]">
+                    <span className="shrink-0 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 py-1 text-xs font-semibold text-[var(--text-muted)]">
                       {exp.period}
                     </span>
                   </div>
 
                   {/* Location */}
-                  <div className="mb-3 flex items-center gap-1.5 text-[0.7rem] text-[var(--text-dim)]">
+                  <div className="mb-3 flex items-center gap-1.5 text-xs text-[var(--text-dim)]">
                     <HiOutlineLocationMarker size={12} />
                     {exp.location}
                   </div>
 
                   {/* Description */}
-                  <p className="mb-4 text-[0.82rem] leading-relaxed text-[var(--text-dim)]">
+                  <p className="mb-4 text-sm leading-relaxed text-[var(--text-dim)]">
                     {exp.desc}
                   </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5">
                     {exp.tags.map((t) => (
-                      <span key={t} className="tag text-[0.6rem]">
+                      <span key={t} className="tag text-[0.7rem]">
                         {t}
                       </span>
                     ))}
@@ -78,37 +78,6 @@ export function Experience() {
             ))}
           </div>
         </div>
-
-        {/* ── Education ── */}
-        <div data-reveal className="mt-20 mb-8">
-          <span className="section-num mb-4 block">
-            <span>EDUCATION</span>
-          </span>
-        </div>
-
-        {EDUCATION.map((edu, i) => (
-          <div
-            key={i}
-            data-reveal
-            style={{ transitionDelay: `${i * 100}ms` }}
-            className="card flex flex-col gap-3 p-4 sm:flex-row sm:items-start sm:gap-4 sm:p-6"
-          >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-hover)] text-[var(--text-dim)]">
-              <HiOutlineAcademicCap size={22} />
-            </div>
-            <div>
-              <h3 className="text-base font-bold">{edu.degree}</h3>
-              <p className="text-sm font-semibold text-[var(--text-muted)]">{edu.field}</p>
-              <p className="text-xs text-[var(--text-dim)]">{edu.school}</p>
-              <span className="mt-1 inline-block text-[0.65rem] text-[var(--text-dim)]">
-                {edu.period}
-              </span>
-              <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--text-dim)]">
-                {edu.detail}
-              </p>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );

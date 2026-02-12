@@ -12,7 +12,7 @@ export function Footer() {
             {PERSONAL.name.split(" ")[0]}
             <span className="text-[var(--text-dim)]"> .</span>
           </p>
-          <p className="text-[0.7rem] text-[var(--text-dim)]">
+          <p className="text-xs text-[var(--text-dim)]">
             © {new Date().getFullYear()} {PERSONAL.nameTh}. All rights reserved.
           </p>
         </div>
@@ -22,7 +22,7 @@ export function Footer() {
             <a
               key={s.id}
               href={`#${s.id}`}
-              className="text-[0.65rem] font-semibold uppercase tracking-wider text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
+              className="text-[0.7rem] font-semibold uppercase tracking-wider text-[var(--text-dim)] transition-colors hover:text-[var(--text)]"
             >
               {s.label}
             </a>

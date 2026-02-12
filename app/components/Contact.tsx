@@ -25,7 +25,7 @@ export function Contact() {
           className="group mb-8 flex flex-col gap-4 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] px-5 py-6 transition-all hover:border-[var(--border-hover)] hover:bg-[var(--bg-hover)] sm:mb-12 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-8"
         >
           <div>
-            <p className="mb-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-dim)]">
               ส่งอีเมลถึงผม
             </p>
             <p className="text-base font-bold text-[var(--text)] sm:text-2xl md:text-3xl">
@@ -53,7 +53,7 @@ export function Contact() {
                 {c.icon}
               </span>
               <div className="min-w-0">
-                <p className="text-[0.6rem] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)]">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-[var(--text-dim)]">
                   {c.label}
                 </p>
                 <p className="truncate text-sm font-semibold text-[var(--text-muted)] transition-colors group-hover:text-[var(--text)]">
